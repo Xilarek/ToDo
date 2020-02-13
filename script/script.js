@@ -73,6 +73,7 @@ const itemComplete = function (elem) {
     if (id === 'todo') {
         data.todo.splice(data.todo.indexOf(text), 1);
         data.completed.push(text);
+        
     } else {
         data.completed.splice(data.completed.indexOf(text), 1);
         data.completed.push(text);
