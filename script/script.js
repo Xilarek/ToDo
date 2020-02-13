@@ -15,7 +15,7 @@ if (localStorage.getItem('localdata')) {
 }
 //Рендер функции даты, если они есть в Stоrage 
 const renderItemsForUpdate = function () {
-    if (!data.todo.length && data.completed.length) {
+    if (!data.todo.length && !data.completed.length) {
         return;
     }
 
@@ -76,7 +76,7 @@ const itemComplete = function (elem) {
         
     } else {
         data.completed.splice(data.completed.indexOf(text), 1);
-        data.completed.push(text);
+        data.todo.push(text);
     }
     itemParent.removeChild(item);
     target.insertBefore(item, target.childNodes[0]);
